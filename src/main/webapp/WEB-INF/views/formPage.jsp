@@ -26,13 +26,18 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" href="basic-theme.css" rel="stylesheet"
+<link rel="stylesheet" href="css/basic-theme.css" rel="stylesheet"
 	type="text/css">
 <title>Formulario De Ejemplo</title>
 </head>
 <body>
-	<section class="container">
-		<H1 class="text-center m-5 display-1">Formulario de Ejemplo JSP</H1>
+	<section class="container mt-5">
+		<header class="title-container text-center py-4 row">
+		
+			<H1 class="col-12 display-3">Formulario del alumnado</H1>
+		  <img class="col-lg-4 col-md-12 col-sm-12 mx-auto align-center" src="img/header-back.jpg" />
+		</header>
+
 	</section>
 </body>
 </html>
