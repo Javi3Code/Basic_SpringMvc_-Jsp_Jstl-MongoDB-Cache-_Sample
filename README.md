@@ -1,2 +1,2 @@
-# Basic_SpringMvc_Jsp_Jslt_Sample
-Basic example of jsp + jslt with SpringMvc 
+# Basic_SpringMvc_Jsp_Jstl_Sample
+Basic example of jsp + jstl with SpringMvc 
