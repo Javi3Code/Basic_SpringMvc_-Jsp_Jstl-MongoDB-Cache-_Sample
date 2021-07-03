@@ -2,6 +2,7 @@
     --color-primary: rgb(106, 106, 209);
     --color-secundary: rgb(69, 189, 169);
     --color-info: rgb(228, 245, 244);
+    --color-ball: rgb(118, 134, 43);
 }
 
 body {
@@ -26,17 +27,33 @@ body {
 }
 
 .container .teacher-card {
-    height: auto;
     border-radius: 1.0rem;
     box-shadow: 0.5rem 1rem 1.5rem 0rem;
     white-space: normal;
+    flex-direction: row;
 }
 
-.container .pr-language-section {
+.container .teacher-card .pr-language-section {
     border-radius: 1.0rem;
     background-color: var(--color-info);
+    flex-direction: row;
+    height: fit-content;
+}
+.container .teacher-card .pr-language-section>ul>li {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.container .pr-language-section>ul>li {
-    list-style-type: none;
+.container .teacher-card .pr-language-section>ul>li:nth-last-of-type(1) {
+    margin-bottom: 0px;
+}
+
+.container .teacher-card .pr-language-section .circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: var(--color-ball);
 }

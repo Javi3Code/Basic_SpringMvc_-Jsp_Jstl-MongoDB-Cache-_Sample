@@ -40,21 +40,27 @@
 			<img class="col-lg-4 col-md-12 col-sm-12 mx-auto align-center"
 				src="img/header-back.jpg" />
 		</header>
-		<article class="row text-center card teacher-card ">
-				<div class="col-lg-4">
-					<p class="h2 py-3">${teacher.name}&nbsp;${teacher.surname}</p>
-					<p class="pb-3">${teacher.teacherDescription}</p>
-				</div>
-				<section class="col-lg-8 pr-language-section card  py-3">
-					<ul>
-						<c:forEach items="${teacher.prLanguages}" var="language">
-							<li>${language.name}</li>
-						</c:forEach>
-					</ul>
-			</section>
+		<article
+			class="row justify-content-around p-3 text-center card teacher-card ">
+			<div class="col-lg-4 col-12">
+				<p class="h2 pb-3">${teacher.name}&nbsp;${teacher.surname}</p>
+				<p>${teacher.teacherDescription}</p>
+			</div>
+			<div class="col-lg-6 col-12 pr-language-section card align-self-center">
+				<ul class="col-12">
+					<c:forEach items="${teacher.prLanguages}" var="language">
+						<li class="col-12 justify-content-around row"><div
+								class="col-5 ">${language.name}</div>
+							<div class="col-7 row align-items-center ">
+								<c:forEach begin="1" end="${language.skill}">
+									<div class="circle mr-1"></div>
+								</c:forEach>
+							</div></li>
+					</c:forEach>
+				</ul>
+			</div>
 		</article>
 	</section>
-
 
 </body>
 </html>
