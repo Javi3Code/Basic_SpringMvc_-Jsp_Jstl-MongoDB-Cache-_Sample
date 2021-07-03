@@ -1,16 +1,22 @@
 :root {
     --color-primary: rgb(106, 106, 209);
     --color-secundary: rgb(69, 189, 169);
+    --color-info: rgb(228, 245, 244);
+}
+
+body {
+    background-color: var(--color-primary);
 }
 
 .title-container {
     color: white;
     background-color: var(--color-secundary);
+    border-radius: 1.8rem;
 }
 
 .title-container>h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
+    /* font-size: 24px; */
 }
 
 .title-container>img {
@@ -19,7 +25,18 @@
     opacity: 0.5;
 }
 
-.teacher-card {
-    background-color: var(--color-primary);
+.container .teacher-card {
     height: auto;
+    border-radius: 1.0rem;
+    box-shadow: 0.5rem 1rem 1.5rem 0rem;
+    white-space: normal;
+}
+
+.container .pr-language-section {
+    border-radius: 1.0rem;
+    background-color: var(--color-info);
+}
+
+.container .pr-language-section>ul>li {
+    list-style-type: none;
 }

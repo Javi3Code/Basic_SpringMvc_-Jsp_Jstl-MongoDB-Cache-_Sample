@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
 <meta lang="es">
 <meta charset="utf-8">
@@ -32,14 +33,25 @@
 <body>
 	<c:set var="teacher" value="${teacher}">
 	</c:set>
+	<c:set property="teacher.students" var="students"></c:set>
 	<section class="container mt-5">
-		<header class="title-container text-center py-4 row">
-			<H1 class="col-12 display-2">Formulario del alumnado</H1>
+		<header class="title-container text-center py-4 row card">
+			<H1 class="col-12 display-4">Formulario del alumnado</H1>
 			<img class="col-lg-4 col-md-12 col-sm-12 mx-auto align-center"
 				src="img/header-back.jpg" />
 		</header>
-		<article class="row text-center card teacher-card">
-			<p class="h2 col-4">${teacher}</p>
+		<article class="row text-center card teacher-card ">
+				<div class="col-lg-4">
+					<p class="h2 py-3">${teacher.name}&nbsp;${teacher.surname}</p>
+					<p class="pb-3">${teacher.teacherDescription}</p>
+				</div>
+				<section class="col-lg-8 pr-language-section card  py-3">
+					<ul>
+						<c:forEach items="${teacher.prLanguages}" var="language">
+							<li>${language.name}</li>
+						</c:forEach>
+					</ul>
+			</section>
 		</article>
 	</section>
 

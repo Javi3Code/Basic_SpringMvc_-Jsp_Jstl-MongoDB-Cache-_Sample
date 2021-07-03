@@ -16,5 +16,7 @@ import lombok.experimental.SuperBuilder;
 public final class Teacher extends BasicPersonData
 {
 
+      private String teacherDescription;
+      private Set<ProgrammingLanguage> prLanguages;
       private Set<Student> students;
 }
