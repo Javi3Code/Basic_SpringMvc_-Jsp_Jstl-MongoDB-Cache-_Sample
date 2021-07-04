@@ -9,7 +9,7 @@ import org.jeycode.mvcsample.model.Teacher;
 public interface FakeHelper
 {
 
-      default void setFakeValues(Teacher teacher)
+      default void setTeacherFakeValues(Teacher teacher)
       {
             teacher.setAge(23);
             teacher.setName("Dorothy");

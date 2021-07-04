@@ -113,3 +113,10 @@ body {
     white-space: normal;
     flex-direction: row;
 }
+.container .form-card .btn-sbmt {
+    border-radius: 2rem;
+    border: 0.3rem solid var(--color-primary);
+    max-width:fit-content;
+    overflow: hidden;
+    justify-content: center;
+}

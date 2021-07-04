@@ -4,6 +4,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
 <head>
 <meta lang="es">
 <meta charset="utf-8">
@@ -62,10 +64,30 @@
 				</ul>
 			</div>
 		</article>
-		<form:form class="row p-3 text-center card form-card">
-			<section class="name-section">
-<%-- 			<form:button id="btn-accept" class="btn " name="btn-ctc"/> --%>
+		<form:form class="row col-12 p-3 text-center card form-card"
+			methodParam="student" action="" modelAttribute="student"
+			method="POST">
+			<section
+				class="name-section justify-content-around mt-2 mx-2 col-12 row">
+				<div class="mr-5 col-5">
+					<form:label path="" class="mr-2">
+						<fmt:message key="i18n.form.student.name" />:</form:label>
+					<fmt:message key="i18n.form.student.name.placeholder" var="namePH" />
+					<form:input path="${student.name}" placeholder="${namePH}" />
+				</div>
+				<div class=" col-5">
+					<form:label path="" class="mr-2">
+						<fmt:message key="i18n.form.student.surnames" />:</form:label>
+					<fmt:message key="i18n.form.student.surnames.placeholder"
+						var="surnamesPH" />
+					<form:input path="${student.surname}" placeholder="${surnamesPH}" />
+				</div>
 			</section>
+			<form:button id="btn-submit"
+				class="row btn btn-sbmt py-2 px-5 mx-auto align-self-center">
+				<fmt:message key="i18n.form.student.submit" />
+			</form:button>
+
 		</form:form>
 	</section>
 
