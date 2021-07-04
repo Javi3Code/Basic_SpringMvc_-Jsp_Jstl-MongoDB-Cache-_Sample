@@ -13,5 +13,5 @@ public class BasicPersonData
 {
 
       private String name,surname;
-      private int age;
+      private Integer age;
 }

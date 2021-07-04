@@ -3,6 +3,7 @@
     --color-secundary: rgb(69, 189, 169);
     --color-info: rgb(228, 245, 244);
     --color-ball: rgb(118, 134, 43);
+    --color-err: rgb(219, 93, 93);
 }
 
 body {
@@ -113,10 +114,40 @@ body {
     white-space: normal;
     flex-direction: row;
 }
+
+.container .form-card .name-section {
+    border-bottom: 0.10rem solid var(--color-primary);
+}
+
+.container .form-card .name-section .input-ok-style {
+    border: 0.25rem solid var(--color-info);
+    text-decoration: dotted solid var(--color-info);
+}
+
+.container .form-card .name-section .input-ok-style:focus {
+    outline-style: none;
+    border: 0.25rem solid var(--color-secundary);
+}
+
+.container .form-card .name-section .input-err-style {
+    outline-style: none;
+    border: 0.25rem solid var(--color-err);
+}
+
 .container .form-card .btn-sbmt {
     border-radius: 2rem;
     border: 0.3rem solid var(--color-primary);
-    max-width:fit-content;
+    background-color: var(--color-secundary);
+    color: white;
+    max-width: fit-content;
     overflow: hidden;
     justify-content: center;
+    font-size: 18px;
+    font-weight:bold ;
+}
+
+.container .form-card .btn-sbmt:hover {
+    outline-style: none;
+    border: 0.3rem solid var(--color-secundary);
+    background-color: var(--color-primary);
 }

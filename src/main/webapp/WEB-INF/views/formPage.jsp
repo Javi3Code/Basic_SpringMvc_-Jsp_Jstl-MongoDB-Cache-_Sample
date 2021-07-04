@@ -30,6 +30,7 @@
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/basic-theme.css" rel="stylesheet"
 	type="text/css">
+<script src="js/formEvents.js" type="text/javascript"></script>
 <title>Formulario De Ejemplo</title>
 </head>
 <body>
@@ -64,32 +65,44 @@
 				</ul>
 			</div>
 		</article>
-		<form:form class="row col-12 p-3 text-center card form-card"
-			methodParam="student" action="" modelAttribute="student"
+		<form:form class="row p-3 text-center card form-card"
+			methodParam="student" action="suscribe" modelAttribute="student"
 			method="POST">
 			<section
-				class="name-section justify-content-around mt-2 mx-2 col-12 row">
-				<div class="mr-5 col-5">
+				class="name-section pb-3 justify-content-around mt-2 mb-4 mx-auto col-12 row">
+				<div class="col-4">
 					<form:label path="" class="mr-2">
 						<fmt:message key="i18n.form.student.name" />:</form:label>
 					<fmt:message key="i18n.form.student.name.placeholder" var="namePH" />
-					<form:input path="${student.name}" placeholder="${namePH}" />
+					<form:input id="inputName" onkeydown="acceptOnlyLetters(event)"
+						cssClass="input-ok-style" maxlength="30"
+						cssErrorClass="input-err-style" class="p-2" path="${student.name}"
+						placeholder="${namePH}" />
 				</div>
-				<div class=" col-5">
+				<div class="col-4">
 					<form:label path="" class="mr-2">
 						<fmt:message key="i18n.form.student.surnames" />:</form:label>
 					<fmt:message key="i18n.form.student.surnames.placeholder"
 						var="surnamesPH" />
-					<form:input path="${student.surname}" placeholder="${surnamesPH}" />
+					<form:input id="inputSurname" onkeydown="acceptOnlyLetters(event)"
+						cssClass="input-ok-style" maxlength="50"
+						cssErrorClass="input-err-style" class="p-2"
+						path="${student.surname}" placeholder="${surnamesPH}" />
+				</div>
+				<div class="col-4">
+					<form:label path="" class="mr-2">
+						<fmt:message key="i18n.form.student.age" />:</form:label>
+					<fmt:message key="i18n.form.student.age.placeholder" var="agePH" />
+					<form:input id="inputAge" onkeyup="limitSize(this,event)" type="number" cssClass="input-ok-style"
+						cssErrorClass="input-err-style" class="p-2" path="${student.age }"
+						placeholder="${agePH}" />
 				</div>
 			</section>
-			<form:button id="btn-submit"
-				class="row btn btn-sbmt py-2 px-5 mx-auto align-self-center">
+			<form:button type="submit" id="btn-submit"
+				class="row btn  btn-sbmt py-2 px-5 mx-auto align-self-center">
 				<fmt:message key="i18n.form.student.submit" />
 			</form:button>
-
 		</form:form>
 	</section>
-
 </body>
 </html>

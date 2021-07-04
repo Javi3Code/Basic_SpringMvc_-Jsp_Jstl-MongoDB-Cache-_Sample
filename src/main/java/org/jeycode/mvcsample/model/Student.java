@@ -14,5 +14,5 @@ import lombok.experimental.SuperBuilder;
 public class Student extends BasicPersonData
 {
 
-      private int grade;
+      private Integer grade;
 }
