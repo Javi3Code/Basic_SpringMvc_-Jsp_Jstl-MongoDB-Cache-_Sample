@@ -36,6 +36,8 @@
 <body>
 	<c:set var="teacher" value="${teacher}">
 	</c:set>
+	<c:set var="student" value="${student}">
+	</c:set>
 	<c:set property="teacher.students" var="students"></c:set>
 	<section class="container mt-5">
 		<header class="title-container text-center py-4 row card">
@@ -74,9 +76,8 @@
 					<form:label path="" class="mr-2">
 						<fmt:message key="i18n.form.student.name" />:</form:label>
 					<fmt:message key="i18n.form.student.name.placeholder" var="namePH" />
-					<form:input id="inputName" onkeydown="acceptOnlyLetters(event)"
-						cssClass="input-ok-style" maxlength="30"
-						cssErrorClass="input-err-style" class="p-2" path="${student.name}"
+					<form:input id="inputName" cssClass="input-ok-style"
+						cssErrorClass="input-err-style" class="p-2" path="name"
 						placeholder="${namePH}" />
 				</div>
 				<div class="col-4">
@@ -84,17 +85,15 @@
 						<fmt:message key="i18n.form.student.surnames" />:</form:label>
 					<fmt:message key="i18n.form.student.surnames.placeholder"
 						var="surnamesPH" />
-					<form:input id="inputSurname" onkeydown="acceptOnlyLetters(event)"
-						cssClass="input-ok-style" maxlength="50"
-						cssErrorClass="input-err-style" class="p-2"
-						path="${student.surname}" placeholder="${surnamesPH}" />
+					<form:input id="inputSurname" cssClass="input-ok-style" class="p-2"
+						path="surname" placeholder="${surnamesPH}" />
 				</div>
 				<div class="col-4">
 					<form:label path="" class="mr-2">
 						<fmt:message key="i18n.form.student.age" />:</form:label>
 					<fmt:message key="i18n.form.student.age.placeholder" var="agePH" />
-					<form:input id="inputAge" onkeyup="limitSize(this,event)" type="number" cssClass="input-ok-style"
-						cssErrorClass="input-err-style" class="p-2" path="${student.age }"
+					<form:input id="inputAge" type="number" cssClass="input-ok-style"
+						cssErrorClass="input-err-style" class="p-2" path="age"
 						placeholder="${agePH}" />
 				</div>
 			</section>
