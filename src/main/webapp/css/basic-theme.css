@@ -34,6 +34,7 @@ body {
     flex-direction: row;
     position: relative;
     border: none;
+    height: 300px;
 }
 
 .container .teacher-card::after {
@@ -143,7 +144,7 @@ body {
     overflow: hidden;
     justify-content: center;
     font-size: 18px;
-    font-weight:bold ;
+    font-weight: bold;
 }
 
 .container .form-card .btn-sbmt:hover {

@@ -3,4 +3,12 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-  messages:    basename: basic-jsp-sample-message  
+  messages:    basename: basic-jsp-sample-message
+  data:    mongodb:      host: localhost
+      port: 27017
+      database: FirstSampleWithMongodb
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+           
+ 
